@@ -1,0 +1,261 @@
+//Imports
+@import "variables";
+
+/*Estilos Generales*/
+body{
+    background-image: url(../imagen/fondo.jpg);
+    background-size: cover;
+}
+@media only screen and (max-width:786px){
+    body{
+        background-image: none;
+        background-color: rgb(252, 252, 252);
+    }
+}
+header{
+    background-color: $ColorFondo;
+}
+@media only screen and (max-width:786px){
+    header{
+        background-color: none;
+    }
+}
+header h1{
+    font-family: $LetraNombre;  
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 4px;
+    animation-duration: 4s;
+    animation-name: aparecer;
+}
+@keyframes aparecer{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+header h3{
+    text-align: center;
+    font-size: 0.8rem;
+    text-decoration: underline;
+    letter-spacing: 4px;
+}
+article{
+    font-style: italic;
+}
+p{ color: rgb(0, 0, 0);
+    line-height: 1.6;
+}
+h2{
+    text-align: center;
+    font-size: 30px;
+}
+h5{
+    text-align: center;
+    align-content: center;
+}
+a{
+    text-decoration: none;
+} 
+            /*Footer*/
+footer{
+    display: flex;
+    height: $MedidaGeneral*1.4;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgba(207, 236, 228, 0.87);
+    justify-content: space-evenly;
+    align-content: center;     
+}
+@media only screen and (max-width:786px){
+    footer{
+         height: auto; 
+    }
+}
+
+span{
+    align-content: center;
+    text-align: center;
+}
+h5{
+    font-weight: bold;
+}
+.AchicarFooter{
+    font-size: medium;
+    font-family: $LetraParrafo;
+}
+
+@media only screen and (max-width:786px){
+    .AchicarFooter{
+         font-size: 0.7em;
+         text-align: center;  
+    }
+}
+.ubicacion{
+    width: $TamTotal;
+    height: $TamTotal;
+}
+
+
+/*Estilo Inicio*/
+aside h1{
+    text-align: center;
+    font-family: $LetraParrafo;
+    background: rgb(4,1,1);
+    background: radial-gradient(circle, rgba(4,1,1,0.5942752100840336) 83%, rgba(245,244,244,1) 100%);
+    color: rgb(243, 242, 242);
+
+}
+.NavAjuste{
+    display: flex;
+    flex-direction: row-reverse;
+}  
+.FuenteNav{
+    font-family: $LetraParrafo;
+}
+
+.video{
+    width: $TamTotal;
+    padding: 0%;
+    margin: 0%;
+    max-width: 831px;
+
+}
+@media (min-width: 831px) {
+    .video{
+        max-width: 100%;
+    }
+}
+
+
+/*Estilo - Actividades*/
+
+.servicios{
+    display: grid;
+    grid-template-areas:
+    "actividades"
+    "FotoAct";
+}
+.act{
+    grid-area: "actividades";
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.FotoAct{
+    grid-area: "FotoAct";
+    display: flex;
+    justify-content: space-around;
+}
+.img{
+    height: $MedidaGeneral;
+    width: $MedidaGeneral*1.5;
+    transition: heigth 2s;
+}
+.img:hover{
+    transform: scale(1.5,1.5);
+}
+
+/*Estilo - Galería*/
+
+.CaruselImg{
+    margin: 2rem 10rem 2rem 10rem;
+    width: $TamTotal*0.70;
+}
+.CarruselP{
+    color: $ColorCarusel;
+    letter-spacing: 0.2em;
+}
+
+/*Estilo - Nosotros*/
+
+.encabezados{
+    text-align: center;
+    font-weight: bold; 
+    color: rgb(38, 57, 161);
+}
+table{
+    border-style: solid;
+    padding: 10px 15px 10px 15px;
+    display: flex;
+    justify-content: center;
+}
+.main{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-areas: 
+    "aside profesores"
+    "aside horarios";
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: repeat(2, 20rem);
+    grid-row-gap: 5rem;
+    grid-column-gap: 5rem;
+}
+.horarios{
+    grid-area: horarios;
+}
+.aside{
+    grid-area: aside;
+}
+.FotoProfe{
+    height: $MedidaGeneral;
+}
+.profesores{
+    grid-area: profesores;
+    display: grid;
+    grid-template-areas: 
+    "titulo"
+    "nombres"
+    "staff"
+    "especializacion";
+}
+#TituloNosotros{
+    grid-area: titulo;
+    text-align: center;
+}
+.Identidad{
+    grid-area: nombres;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+}
+.staff{
+    grid-area: staff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+}
+.especializacion{
+    grid-area: especializacion;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    width: auto;
+}
+.Profesion{
+ text-align: center;
+}
+.SubtituloNos{
+    text-align: center;
+}
+#FotoCancha{
+    height: 23rem;
+    width: 25rem;
+    margin-left: $MedidaGeneral/5;
+}
+#DescripcionComplejo{
+    margin-left: $MedidaGeneral/5;
+}
+
+/*Estilo - Contacto*/
+
+fieldset{
+    width: $TamTotal*0.30;
+    height: $MedidaGeneral*2;
+    border: double rgb(33, 6, 107);
+}
